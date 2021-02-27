@@ -68,6 +68,7 @@ exports.server = () => {
   });
 }
 
+
 exports.copy = () => {
   (async () => {
     const clear = await del("build");
