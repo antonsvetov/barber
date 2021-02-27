@@ -1,0 +1,19 @@
+.breadcrumbs {
+  display: flex;
+  width: 110px;
+  height: 35px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.breadcrumbs__item {
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  transform: rotate(45deg);
+}
+
+.breadcrumbs__item--active {
+  background-color: white;
+}

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="preload" href="style.css" as="style" />
+    <!-- <link rel="preload" href="/img/bg-header@2x.jpg" as="image" />
+    <link rel="preload" href="/js/script.min.js" as="script" /> -->
+    <link
+      rel="preload"
+      href="fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff"
+      as="font"
+    />
+    <link
+      rel="preload"
+      href="fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff2"
+      as="font"
+    />
+    <link
+      rel="preload"
+      href="fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff"
+      as="font"
+    />
+    <link
+      rel="preload"
+      href="fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff2"
+      as="font"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="all" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="page text">
+    <header class="header page__header">
+      <h1 class="visually-hidden">Барбершоп "Бородинский"</h1>
+      <div class="logotype header__logotype">
+        <a href="/">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desctop.svg" />
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
+            <img
+              src="img/logo-mobile.svg"
+              alt="Логотип Барбершопа"
+              class="logotype__image"
+            />
+          </picture>
+        </a>
+      </div>
+      <nav class="main-nav main-nav__header">
+        <!-- main-nav__btn--open -->
+        <button
+          class="main-nav__btn"
+          type="button"
+          aria-label="Открыть меню"
+        ></button>
+        <div class="main-nav__wrapper">
+          <ul class="nav-list">
+            <li class="nav-list__item nav-list__item--active">
+              <a href="#" class="link nav-list__link">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="link nav-list__link">Наши работы</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="link nav-list__link">Записаться</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="link nav-list__link">Контакты</a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="nav-list__item main-nav__login"
+            aria-label="Войти на сайт"
+          >
+            <span class="svg__login"
+              >.<svg
+                id="Слой_1"
+                data-name="Слой 1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: currentColor;
+                      opacity: 0.3;
+                    }
+                  </style>
+                </defs>
+                <title>login-in</title>
+                <polygon
+                  class="cls-1"
+                  points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"
+                />
+                <polygon
+                  class="cls-1"
+                  points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"
+                /></svg></span
+            ><span class="text main-nav__entrie-message">Войти</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-index">
+      <section class="statistic">
+        <div class="statistic__message">
+          <h2 class="statistic__message-head text--b-vl">
+            Стрижка у нас это выгодно!
+          </h2>
+          <p class="statistic__message-text text--m">
+            Мужская стрижка требует точного подхода. Обратимся к статистике:
+          </p>
+        </div>
+        <dl class="statistic__data">
+          <div class="statistic__data-item">
+            <dt class="text--b-exl">1500</dt>
+            <dd class="text--b-s">рублей вложений</dd>
+          </div>
+          <div class="statistic__data-item">
+            <dt class="text--b-exl">7200</dt>
+            <dd class="text--b-s">секунд времени мастера</dd>
+          </div>
+          <div class="statistic__data-item">
+            <dt class="text--b-exl">90000</dt>
+            <dd class="text--b-s">постриженных волос</dd>
+          </div>
+          <div class="statistic__data-item">
+            <dt class="text--b-exl">500000</dt>
+            <dd class="text--b-s">лайков и комплиментов</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="advantages">
+        <h2 class="visually-hidden">Наши приемущества</h2>
+        <div class="advatages__wrapper">
+          <article class="advantages__item advantages__item--show">
+            <svg class="advantages__svg">
+              <use xlink:href="#advantage-1"></use>
+            </svg>
+            <div class="advantages__item-wrapper">
+              <h3 class="text--b-l">Быстро</h3>
+              <p class="text--m">
+                Мы делаем свою работу быстро! Два часа пролетят незаметно и вы —
+                счастливый обладатель стильной стрижки-минутки
+              </p>
+            </div>
+          </article>
+          <article class="advantages__item">
+            <svg class="advantages__svg">
+              <use xlink:href="#advantage-2"></use>
+            </svg>
+            <div class="advantages__item-wrapper">
+              <h3 class="text--b-l">Круто</h3>
+              <p class="text--m">
+                Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду
+                футбола или кино. Во всяком случае внешне.
+              </p>
+            </div>
+          </article>
+          <article class="advantages__item">
+            <svg class="advantages__svg">
+              <use xlink:href="#advantage-3"></use>
+            </svg>
+            <div class="advantages__item-wrapper">
+              <h3 class="text--b-l">Дорого</h3>
+              <p class="text--m">
+                Наши мастера — профессионалы своего делаи не могут стоить
+                дёшево. К тому же, разве цена не даёт определённый статус?
+              </p>
+            </div>
+          </article>
+          <div class="advatages__breadcrumbs breadcrumbs">
+            <span class="breadcrumbs__item breadcrumbs__item--active"></span>
+            <span class="breadcrumbs__item"></span>
+            <span class="breadcrumbs__item"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="news__wrapper">
+          <h2 class="text--b-vl">Новости и акции</h2>
+          <button type="button" class="button news__button">
+            <span class="text--b-s">Показать все</span>
+          </button>
+          <article class="news__item news__item--show">
+            <time class="news__time"
+              ><span class="text--b-l">29</span
+              ><span class="text--b-sm">сент</span></time
+            >
+            <p class="text news__text">
+              Нам наконец завезли Ягермайстер! Теперь вы можете пропусить
+              стаканчик во время стрижки.
+            </p>
+          </article>
+          <article class="news__item news__item--show">
+            <time class="news__time"
+              ><span class="text--b-l">19</span
+              ><span class="text--b-sm">сент</span></time
+            >
+            <p class="text news__text">
+              В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил
+              наши стройные ряды. Спешите записаться!
+            </p>
+          </article>
+          <article class="news__item">
+            <time class="news__time"
+              ><span class="text--b-l">9</span
+              ><span class="text--b-sm">сент</span></time
+            >
+            <p class="text news__text">
+              Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь
+              и узнаете, в чем здесь подвох!
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__wrapper">
+          <h2 class="text--b-vl">Отзывы о нас</h2>
+          <button type="button" class="button reviews__button">
+            <span class="text--b-s">Оставить свой</span>
+          </button>
+
+          <div class="slider slider__wrapper">
+            <button
+              type="button"
+              class="slider__button slider__button-prew"
+            ></button>
+            <button
+              type="button"
+              class="slider__button slider__button-next"
+            ></button>
+
+            <div class="slider__items-wrapper">
+              <div class="slider__item">
+                <div class="slider__img-wrapper">
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/slider/slider-1-desktop.jpg,
+                        img/slider/slider-1-desktop@2x.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/slider/slider-1.jpg,
+                        img/slider/slider-1@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="img/slider/slider-1-mobile.jpg"
+                      alt=""
+                      srcset="img/slider/slider-1-mobile@2x.jpg 2x"
+                      class="slider__img"
+                    />
+                  </picture>
+                </div>
+                <div class="slider__text-content">
+                  <h3 class=".text--b-m">Трэвис Баркер</h3>
+                  <p class="text">
+                    Спасибо за лысину! Был проездом в Москве, заскочил
+                    побриться, чтобы было видно новую татуировку!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="breadcrumbs slider__breadcrumbs">
+              <span class="breadcrumbs__item breadcrumbs__item--active"></span>
+              <span class="breadcrumbs__item"></span>
+              <span class="breadcrumbs__item"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer text">
+      <section class="contacts">
+        <h4 aria-label="Наши контактные двнные">Барбершоп Бородинский</h4>
+        <p>г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+        <p>Тел.: +7 (812) 555-66-66</p>
+      </section>
+
+      <section class="social">
+        <h4 class="social__message" aria-label="Мы в социальных сетях">
+          Давайте дружить!
+        </h4>
+        <ul class="social__list">
+          <li class="social__item"><a href="#" class="social__vk"></a></li>
+          <li class="social__item"><a href="#" class="social__fb"></a></li>
+          <li class="social__item"><a href="#" class="social__inst"></a></li>
+        </ul>
+      </section>
+
+      <section class="dev">
+        <p class="dev__message">Разработано:</p>
+        <a
+          class="dev__link"
+          href="#"
+          aria-label="Связаться с разработчиками сайта"
+          >Разрабочики</a
+        >
+      </section>
+    </footer>
+
+    <div class="modal__wrapper">
+      <section class="modal modal--active">
+        <form class="login-form modal__form" action="#">
+          <h2 class="text--b-vl">
+            Личный кабинет возможно надо изменить цвет текста
+          </h2>
+          <p class="text">Введите логин и пароль чтобы войти</p>
+
+          <label for="login" class="visually-hidden">Введите свой логин</label>
+          <input
+            type="text"
+            name="login"
+            placeholder="Логин"
+            id="login"
+            required
+          />
+
+          <label for="pass" class="visually-hidden">Введите свой пароль </label>
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            placeholder="Пароль"
+            required
+          />
+
+          <label><input type="checkbox" name="remember" id="remember" /></label>
+          <a href="#">Я забыл пароль</a>
+
+          <button type="submit" class="login-form__submit">
+            Войти в личный кабинет
+          </button>
+          <button type="button" class="login-form__close">Закрыть</button>
+        </form>
+      </section>
+    </div>
+    <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <style>
+          .cls-2 {
+            fill: #8b6244;
+            opacity: 1;
+          }
+        </style>
+      </defs>
+      <symbol id="advantage-1" viewBox="0 0 94.94 94.16">
+        <title>advatage-1</title>
+        <path
+          class="cls-2"
+          d="M90.28,28.39a47.39,47.39,0,0,0-8.5-13.1q-1,1.89-2,3.78a43.15,43.15,0,0,1,6.42,10C87.56,28.84,88.92,28.62,90.28,28.39Z"
+        />
+        <path
+          class="cls-2"
+          d="M90,43.56c.09,1.17.15,2.34.15,3.52A43.08,43.08,0,0,1,47.08,90.16q-1.17,0-2.34-.06A7.67,7.67,0,0,1,45,91.94a6.62,6.62,0,0,1-.4,2.15c.83,0,1.67.07,2.52.07A47.13,47.13,0,0,0,94.16,47.08a48.16,48.16,0,0,0-.41-6.16A37.6,37.6,0,0,1,90,43.56Z"
+        />
+        <path
+          class="cls-2"
+          d="M4,47.08A43.08,43.08,0,0,1,68.65,9.79c1.08-.86,2.21-1.73,3.36-2.62A47.07,47.07,0,1,0,29.66,90.81a18.38,18.38,0,0,1-.57-4.59A43.06,43.06,0,0,1,4,47.08Z"
+        />
+        <path
+          class="cls-2"
+          d="M38.77,84.91c7.74-2.72,16.31-9.67,14.54-19.83-.9-5.14-4.48-5-7.27-9.25,14.44-12,24.21-28.66,33-46.26h-2c-7.45,5.66-21.91,17-28.42,26.43-2.6,3.78-4.59,9.31-7.27,13.88-4.54,7.75-15.12,21.23-6.61,31.06-1.38,4.62-1.2,12.39,4,12.56C42,91.77,37.38,88.89,38.77,84.91Zm8.31-38.83a2.59,2.59,0,1,1-2.58,2.58A2.59,2.59,0,0,1,47.08,46.08ZM36.79,75c-1.86-9,7-16.95,11.89-9.25C48.94,73.16,42.5,81.51,36.79,75Z"
+        />
+        <path
+          class="cls-2"
+          d="M56,51.2c14-5.2,30.58-7.75,39-18.5-9.41,1.38-18.12,3.47-27.75,4.62C65.05,43.56,60.16,47,56,51.2Z"
+        />
+        <path
+          class="cls-2"
+          d="M12.34,40c-4.23,12.25,8.42,16,21.8,13.88,3.79-4.82,5.85-10,2-15.87C31.23,30.52,15.22,31.61,12.34,40Zm5.28,7.27C12.5,36.4,30.51,36.17,32.16,42,34.34,49.58,23.06,50,17.62,47.24Z"
+        />
+      </symbol>
+      <symbol id="advantage-2" viewBox="0 0 94.16 88.62">
+        <title>advatage-2</title>
+        <path
+          class="cls-2"
+          d="M87.19,22.42q-.85,2.61-1.68,5.23a43,43,0,0,1-13,54.16,13,13,0,0,1,3.14,2.67A47.08,47.08,0,0,0,87.19,22.42Z"
+        />
+        <path
+          class="cls-2"
+          d="M9.52,70.34l1.34,0A43.06,43.06,0,0,1,66,8.38a22.89,22.89,0,0,1,2.44-3.26A47.08,47.08,0,0,0,6.23,70.48C7.36,70.37,8.48,70.34,9.52,70.34Z"
+        />
+        <path
+          class="cls-2"
+          d="M53.45,82c.44-6.14-.87-14,.66-19.07,4.53-.08,9.56.35,13.15-.66,8.18-14.84,12-34,18.42-50.64V9c-.68-3-3.75-3.7-6.58-4.6h-.65c-10.6,3.43-12,16.1-14.47,27.62-15.8-4.14-32.3-.06-32.89,15.13-4.52.07-8,1.22-9.86,3.94C20.66,57.84,22.8,61.84,27.81,63a22.16,22.16,0,0,1-7.24,12.49c-6.4.62-15.63-1.6-19.07,2v2.63c3.15,3.86,12.85,1.18,19.07,2C27.16,78.11,29,69.45,32.41,62.31c4.67.37,10.86-.78,14.47.66V82.7c-7.83.5-15.45,1.21-19.07,5.92H72.53C69.27,83.33,60.05,84,53.45,82ZM37.67,47.19C38.35,35.48,53,35.5,63.32,38.64c.1,4.72-.52,10.16,1.31,13.15C57.59,50.94,47.56,47.39,37.67,47.19Z"
+        />
+      </symbol>
+      <symbol id="advantage-3" viewBox="0 0 94.16 91.99">
+        <title>advantage-3</title>
+        <path
+          class="cls-2"
+          d="M47.08,8.17A9.11,9.11,0,1,1,38,17.28,9.11,9.11,0,0,1,47.08,8.17Z"
+        />
+        <path
+          class="cls-2"
+          d="M67.46,26.38H26.7a2.82,2.82,0,0,0-2.81,2.82v4.47a2.83,2.83,0,0,0,2.81,2.82h.83V81.88H26.7a2.82,2.82,0,0,0-2.81,2.82v4.47A2.83,2.83,0,0,0,26.7,92H67.46a2.83,2.83,0,0,0,2.82-2.82V84.7a2.83,2.83,0,0,0-2.82-2.82h-.83V36.49h.83a2.83,2.83,0,0,0,2.82-2.82V29.2A2.83,2.83,0,0,0,67.46,26.38ZM33.66,36.49h13.2l-13.2,13.2ZM60.5,81.88H47L60.5,68.41Zm0-28.71L33.66,80V64.93L60.5,38.09Z"
+        />
+        <path
+          class="cls-2"
+          d="M47.08,0A47.08,47.08,0,0,0,18.89,84.79V84.7a7.87,7.87,0,0,1,1.17-4.1,43.08,43.08,0,1,1,54,0,7.79,7.79,0,0,1,1.18,4.1v.09A47.09,47.09,0,0,0,47.08,0Z"
+        />
+      </symbol>
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.main-nav__wrapper {
+  height: 50px;
+  transition-duration: 3s;
+  transition-property: all;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.main-nav__btn--open + .main-nav__wrapper {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  width: 87%;
+  min-height: 250px;
+  background-color: #826550;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #604a3b;
+    box-shadow: 2px 0 4px 0 #67503f;
+    content: "";
+  }
+}

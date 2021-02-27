@@ -1,0 +1,11 @@
+.button {
+  width: 280px;
+  height: 50px;
+  border: solid 1px #e5ddd5;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 160px;
+  }
+}

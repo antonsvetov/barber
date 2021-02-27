@@ -1,0 +1,76 @@
+.main-nav__btn {
+  position: absolute;
+  right: 0px;
+  width: 70px;
+  height: 50px;
+  border: none;
+  background-color: #6a4d38;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 23px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 0 0 white, 0 -8px 0 0 white;
+    content: "";
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__btn--open {
+  position: absolute;
+  right: auto;
+  left: 0px;
+  background-color: #6a4d38;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 23px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+    box-shadow: none;
+    content: "";
+    transform: rotate(45deg);
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: linear;
+  }
+
+  &::after {
+    position: absolute;
+    top: 23px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+    content: "";
+    transform: rotate(-45deg);
+    transition-duration: 3s;
+    transition-property: transform;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

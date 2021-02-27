@@ -1,0 +1,97 @@
+@font-face {
+  font-display: swap;
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff") format("woff");
+}
+
+.text {
+  color: #000000;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.text--m {
+  color: #f7f4f1;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.text--b-sm {
+  color: #ffffff;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.88;
+  text-align: center;
+}
+
+.text--b-s {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.text--b-m {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 1.13;
+  text-align: left;
+}
+
+.text--b-l {
+  color: #f7f4f1;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+}
+
+.text--b-vl {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+.text--b-exl {
+  color: #ffffff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: bold;
+
+  @media (min-width: 768px) {
+    font-size: 72px;
+  }
+}
