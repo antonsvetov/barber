@@ -93,9 +93,10 @@
 .slider__breadcrumbs {
   position: absolute;
   bottom: -30px;
-  left: 40%;
+  left: 37%;
 
   @media (min-width: $tablet) {
+    left: 45%;
   }
 }
 

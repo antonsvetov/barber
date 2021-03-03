@@ -21,24 +21,7 @@ const webP = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 
 
-exports.css = () => {
-  return (
-    gulp
-      .src("source/sass/style.scss")
-      .pipe(plumber())
-      .pipe(sourcemaps.init())
-      .pipe(sass())
-      .pipe(sass().on("error", sass.logError))
-      .pipe(postcss([autoprefixer()]))
-      .pipe(sourcemaps.write("."))
-      .pipe(gulp.dest("source/"))
-      .pipe(browserSync.stream())
-  );
-};
-
-
-
-exports.style = () => {
+function style() {
   return (
     gulp
       .src("source/sass/style.scss")
@@ -50,26 +33,47 @@ exports.style = () => {
       .pipe(csso())
       .pipe(rename("styles.min.css"))
       .pipe(sourcemaps.write("."))
-      .pipe(gulp.dest("source/"))
+      .pipe(gulp.dest("source/css"))
       .pipe(browserSync.stream())
   );
-};
+}
+exports.style = style;
 
 
-exports.server = () => {
+
+
+function css() {
+  return (
+    gulp
+      .src("source/sass/style.scss")
+      .pipe(plumber())
+      .pipe(sourcemaps.init())
+      .pipe(sass())
+      .pipe(sass().on("error", sass.logError))
+      .pipe(postcss([autoprefixer()]))
+      .pipe(sourcemaps.write("."))
+      .pipe(gulp.dest("source"))
+      .pipe(browserSync.stream())
+  );
+}
+exports.css = css;
+
+
+
+function server() {
   browserSync.init({
     server: {
       baseDir: "source",
-    },
       notify: false, // Отключаем уведомления
       online: true,
-      cors: true,
-      ui: false,
+    },
   });
 }
+exports.server = server;
 
 
-exports.copy = () => {
+
+function copy() {
   (async () => {
     const clear = await del("build");
   })();
@@ -78,7 +82,8 @@ exports.copy = () => {
       [
         "source/fonts/**/*.{woff,woff2}",
         "soorce/css/*min.css",
-        "source/img/**/*",
+        "source/img-optim/**/*",
+        "source/js/*min.js",
         "source/*.ico",
         "source/*.html",
       ],
@@ -86,12 +91,17 @@ exports.copy = () => {
     )
     .pipe(gulp.dest("build"));
 }
+exports.copy = copy;
 
 
-exports.startWatch = () => {
+
+function startWatch() {
   gulp.watch("source/sass/**/*.scss", css);
   gulp.watch("source/*.html").on("change", browserSync.reload);
-  }
+
+}
+exports.startWatch = startWatch;
+
 
 
 exports.image = () => (
@@ -120,10 +130,6 @@ exports.svg = () => (
       .pipe(rename("sprite.svg"))
       .pipe(gulp.dest("source/img"))
 );
-
-
-
-
 
 exports.build = gulp.series(style, copy);
 exports.default = gulp.parallel(css, server, startWatch);

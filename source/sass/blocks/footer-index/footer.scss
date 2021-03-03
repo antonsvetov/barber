@@ -1,0 +1,222 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #292929;
+  color: white;
+
+  @media (min-width: $tablet) {
+    min-height: 348px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 198px;
+    justify-content: center;
+  }
+}
+
+.footer {
+  @media (max-width: $tablet) {
+    &::after {
+      position: absolute;
+      top: -45px;
+      left: 0;
+      width: 100%;
+      min-height: 58px;
+      background-image: linear-gradient(to top right, #292929 49%, #f8f5f2 50%),
+        linear-gradient(to top left, #292929 49%, #f8f5f2 50%);
+      background-position: left bottom, right bottom;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      content: "";
+    }
+  }
+}
+
+.footer__wrapper {
+  display: contents;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+    grid-row-gap: 51px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 84px 101px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    height: 84px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+
+.contacts {
+  width: 280px;
+  min-height: 80px;
+  margin-top: 40px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    width: 322px;
+    height: auto;
+    margin-top: 0;
+    grid-column: 1/2;
+    grid-row: 1;
+    justify-self: start;
+    text-align: left;
+
+    & > * {
+      margin: 2px;
+    }
+  }
+}
+
+.footer__phone {
+  @media (max-width: $tablet) {
+    width: 280px;
+    height: 50px;
+    padding-top: 8px;
+    border: solid 1px #3f3f3f;
+    font-weight: bold;
+
+    &:hover {
+      border: none;
+      background-color: #252525;
+      opacity: 0.3;
+    }
+  }
+}
+
+.social {
+  width: 320px;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    width: 180px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -140px;
+  }
+}
+
+.social__list {
+  display: flex;
+  width: 80%;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.social__item {
+  display: flex;
+  width: 106px;
+  height: 106px;
+  border: solid 1px #3f3f3f;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    height: 101px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &:hover {
+    border: none;
+    background-color: #252525;
+    opacity: 0.3;
+  }
+}
+
+.social__vk {
+  background-image: url(img/social-icon/vk-icon-big.png);
+
+  @media (min-width: $desktop) {
+    background-image: url(img/social-icon/vk-icon-small.png);
+  }
+}
+
+.social__fb {
+  background-image: url(img/social-icon/facebook-icon-big.png);
+
+  @media (min-width: $desktop) {
+    background-image: url(img/social-icon/facebook-icon-small.png);
+  }
+}
+
+.social__inst {
+  background-image: url(img/social-icon/insta-icon-big.png);
+
+  @media (min-width: $desktop) {
+    background-image: url(img/social-icon/insta-icon-small.png);
+  }
+}
+
+.social__message {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin: 0px;
+  }
+}
+
+.dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    grid-column: 2/3;
+    grid-row: 1;
+    justify-self: end;
+
+    & > * {
+      margin: 2px;
+    }
+  }
+}
+
+.dev .button {
+  display: block;
+  padding-top: 10px;
+  border: solid 1px #3f3f3f;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    border: none;
+    background-color: #252525;
+    opacity: 0.3;
+  }
+}
+
+.dev__message {
+  @media (min-width: $desktop) {
+    margin-bottom: 10px;
+  }
+}
