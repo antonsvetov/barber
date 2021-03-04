@@ -1521,9 +1521,7 @@ dd {
   display: flex;
   width: 106px;
   height: 106px;
-  border: solid 1px #3f3f3f;
-  background-position: center;
-  background-repeat: no-repeat; }
+  border: solid 1px #3f3f3f; }
 
 @media (min-width: 768px) {
   .social__item {
@@ -1541,25 +1539,40 @@ dd {
   opacity: 0.3; }
 
 .social__vk {
-  background-image: url(img/social-icon/vk-icon-big.png); }
+  width: 23px;
+  height: 26px;
+  margin: auto;
+  background: url("img/social-icon/css_sprites.png") -66px -10px; }
 
 @media (min-width: 1200px) {
   .social__vk {
-    background-image: url(img/social-icon/vk-icon-small.png); } }
+    width: 15px;
+    height: 17px;
+    background: url("img/social-icon/css_sprites.png") -109px -10px; } }
 
 .social__fb {
-  background-image: url(img/social-icon/facebook-icon-big.png); }
+  width: 18px;
+  height: 39px;
+  margin: auto;
+  background: url("img/social-icon/css_sprites.png") -10px -66px; }
 
 @media (min-width: 1200px) {
   .social__fb {
-    background-image: url(img/social-icon/facebook-icon-small.png); } }
+    width: 10px;
+    height: 21px;
+    background: url("img/social-icon/css_sprites.png") -109px -47px; } }
 
 .social__inst {
-  background-image: url(img/social-icon/insta-icon-big.png); }
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  background: url("img/social-icon/css_sprites.png") -10px -10px; }
 
 @media (min-width: 1200px) {
   .social__inst {
-    background-image: url(img/social-icon/insta-icon-small.png); } }
+    width: 19px;
+    height: 19px;
+    background: url("img/social-icon/css_sprites.png") -66px -56px; } }
 
 .social__message {
   display: none; }
